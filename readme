@@ -1,0 +1,39 @@
+==Directory==
+./data
+	corpus.4word2vec:training corpus for word vector.
+	test.animal-143: animal-143 test set/
+	test.sim-301: sim-301 test set. Note that each word in sim-353 may match several words in 
+                     WordNet due to ambiguity. Here in our experiments, for each 
+                     pair in sim-301, we compare the combination of all cases and 
+                     take similarity value of the most similar pair as its result.
+	train.wordnet-noun.pairs:graph training data of wordnet-noun.
+	train.wordnet-noun.wikipage.filter:joint text training data of wordnet-noun.
+	train.yago-animal.pairs:graph training data of yago-animal.
+	train.yago-animal.wikipage.filter:joint text training data of yago-animal.
+	train.wordnet-all.pairs:all the graph of Wordnet, which contains 15 types of relations.
+	train.wordnet-all.wikipage:joint text training data of all wordnet.
+	word2vec.100:the model we trained using word2vec with dimension 100.
+	word2vec.200:the model we trained using word2vec with dimension 200.
+	word2vec.50:the model we trained using word2vec with dimension 50.
+	word2vec.wordnet-noun.prt.100:the file of using word2vec to initialize entry vector of wordnet-noun, dimension 100.
+	word2vec.wordnet-noun.forpv.200:the file of using word2vec to initialize entry vector of wordnet-noun, dimension 200.
+	word2vec.wordnet-noun.forpv.50:the file of using word2vec to initialize entry vector of wordnet-noun, dimension 50.
+	word2vec.yago-animal.forpv.100:the file of using word2vec to initialize entry vector of yago-animal, dimension 100.
+	word2vec.yago-animal.forpv.200:the file of using word2vec to initialize entry vector of yago-animal, dimension 200.
+	word2vec.yago-animal.forpv.50:the file of using word2vec to initialize entry vector of yago-animal, dimension 50.
+	
+./src
+	main.cpp
+
+==Compile==
+"g++ src/main.cpp -o JTGR -lpthread"
+
+==Implement Experiments==
+"./JTGR" for instruction.
+
+==NOTE==
+The parameter setup of word2vec in our experiment is as followed,
+"./word2vec -train corpus.4word2vec -output word2vec.dim100 -cbow 0 -size 100 -window 8 -negative 25 -hs 1 -sample 1e-4 -threads 10 -binary 0 -iter 10"
+
+==CITE==
+please cite
