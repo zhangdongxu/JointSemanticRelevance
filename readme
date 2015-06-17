@@ -1,3 +1,8 @@
+This is the code and data for 'Joint Semantic Relevance Learning with Text Data and Graph Knowledge'
+
+before running the code, please download data from "http://pan.baidu.com/s/1bn0LJun" and unzip it into ./data/
+
+
 ==Directory==
 ./data
 	corpus.4word2vec:training corpus for word vector.
@@ -35,5 +40,3 @@
 The parameter setup of word2vec in our experiment is as followed,
 "./word2vec -train corpus.4word2vec -output word2vec.dim100 -cbow 0 -size 100 -window 8 -negative 25 -hs 1 -sample 1e-4 -threads 10 -binary 0 -iter 10"
 
-==CITE==
-please cite
